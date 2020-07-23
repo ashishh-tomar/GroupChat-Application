@@ -59,6 +59,7 @@ public class Server implements Runnable{
 	
 	public static void main(String[] args) throws Exception
 	{
+		@SuppressWarnings("resource")
 		ServerSocket s=new ServerSocket(4010);
 		while(true)
 		{

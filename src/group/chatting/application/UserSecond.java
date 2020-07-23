@@ -29,6 +29,10 @@ public class UserSecond extends JFrame implements ActionListener,Runnable{
 	
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JPanel p1;
 	JTextArea t1;
 	JButton b1;
@@ -180,6 +184,7 @@ public class UserSecond extends JFrame implements ActionListener,Runnable{
 		setVisible(true);
 		
 		try {
+			@SuppressWarnings("resource")
 			Socket socketClient=new Socket("localhost",4010); //for connection
 			writer=new BufferedWriter(new OutputStreamWriter(socketClient.getOutputStream()));
 			reader=new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
